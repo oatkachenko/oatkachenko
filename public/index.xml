@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
+    <title>LowLevel Log</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <description>Recent content on LowLevel Log</description>
     <generator>Hugo</generator>
     <language>en-us</language>
+    <lastBuildDate>Thu, 04 Dec 2025 15:34:20 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Mystery of the Failing PostgreSQL Incremental Backups.</title>
+      <link>http://localhost:1313/blog/fix-postgres-backup/</link>
+      <pubDate>Thu, 04 Dec 2025 15:34:20 +0100</pubDate>
+      <guid>http://localhost:1313/blog/fix-postgres-backup/</guid>
+      <description>&lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;&#xA;&lt;p&gt;PostgreSQL&amp;rsquo;s &lt;strong&gt;incremental&lt;/strong&gt; backup feature, introduced to optimize backup storage and transfer times, promised to make a huge impact on how we handle large database backups. But what happens when your backup completes successfully, only to fail catastrophically during the restoration process? This is a story of how I uncovered a critical bug in PostgreSQL&amp;rsquo;s codebase that silently broke backups of large, segmented relations.&lt;/p&gt;&#xA;&lt;h3 id=&#34;the-first-encounter-when-success-becomes-failure&#34;&gt;The First Encounter: When Success Becomes Failure&lt;/h3&gt;&#xA;&lt;p&gt;It started with a routine backup restoration test. Our production database, with several relatively small tables and one table exceeding 20Gb in size, had been successfully backed up using PostgreSQL&amp;rsquo;s incremental backup tool. Once a week, on Mondays, we perform a full backup, and the rest of the week, incremental ones. The backup process completed without errors, the logs looked clean, and everything seemed perfect - until we tried to restore.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
